@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <title>App Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mobile App</a>
+      <button class="btn btn-light">今すぐダウンロード</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">機能</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">導入画面</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">ユーザー事例</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">料金プラン</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">お問い合せ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- key -->
+  <section class="home d-flex align-items-center">
+    <div class="animate">
+      <i class="fa-solid fa-arrow-up-long"></i>
+      <i class="fa-solid fa-hourglass-end"></i>
+      <i class="fa-solid fa-clock-rotate-left"></i>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <div class="home-text">
+            <h1>働き方の未来はPixelに</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis laboriosam perspiciatis eius, et
+              magnam quod quisquam atque dignissimos praesentium suscipit.</p>
+            <div class="home-btn">
+              <a href="" class="btn btn-1">今すぐダウンロード</a>
+              <button type="button" class="btn video-play-btn"><i class="fa-brands fa-youtube"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 text-center">
+          <div class="home-img">
+            <div class="circle"></div>
+            <img src="img/app-screenshots/sc1.png" alt="mobile app">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="video-popup">
+    <div class="video-popup-inner">
+      <i class="fa-solid fa-xmark"></i>
+      <div class="iframe-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nmGaIjNWh-g" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- features -->
+  <section class="features margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2><span>Pixel</span>の機能</h2>
+            <span class="my-5">2000社に選べれる６つの理由</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="features-carousel text-center grid mb-2">
+        </div>
+      </div>
+  </section>
+
+  <!-- screenshoots -->
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="section-title text-center">
+        <h2><span>Pixel</span>の導入画面</h2>
+        <span class="my-5">わずか数クリックでワークフローを自動化</span>
+      </div>
+    </div>
+  </div>
+  <div id="myCarousel" class="carousel slide 
+" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item p-5 active">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>仕事が 1 か所で進みます。</h1>
+            <p>仕事のコミュニケーションをすべて 1 か所にまとめれば、<br> 全員の認識が簡単に揃い、意思決定スピードが上がります。</p>
+            <p><a class="btn btn-lg btn-primary btn-1" href="#">無料でお試し</a></p>
+          </div>
+          <div class="text-end">
+            <img src="img/app-screenshots/sc1.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item p-5">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>柔軟性の高いプラットフォーム。</h1>
+            <p>会議設定やファイルの共有から<br> 取引先とのやりとりや顧客問題の解決まで、<br> ワークフローをカスタマイズし仕事をスピードアップ。</p>
+            <p><a class="btn btn-lg btn-primary btn-1" href="#">無料でお試し</a></p>
+          </div>
+          <div class="text-start">
+            <img src="img/app-screenshots/sc2.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item p-5">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>ユーザーを意識したデザイン。</h1>
+            <p>リモートワークだからこそ時間を最大限に活用したい。<br> 同じ部屋にいなくてもチーム全員がつながる。</p>
+            <p><a class="btn btn-lg btn-primary btn-1" href="#">無料でお試し</a></p>
+          </div>
+          <div class="text-end">
+            <img src="img/app-screenshots/sc3.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- download -->
+  <section class="downloads margin padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2><span>Pixel</span>をダウンロードして始めよう</h2>
+            <span class="my-5">今すぐ無料で試してみる！</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="downloads-carousel text-center grid mb-2">
+
+        </div>
+      </div>
+  </section>
+
+  <!-- steps -->
+  <section class="steps margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="mb-5"><span>Pixel</span>の始め方</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="steps-carousel text-center mb-2">
+          <div class="row d-flex justify-content-center card">
+            <ul id="progressbar" class="text-center p-5">
+              <li style="--i:1;">1. Pixel を<br>ダウンロードする</li>
+              <li style="--i:2;">2. アカウントを<br>作成する</li>
+              <li style="--i:3;">3. プランを<br>選べる</li>
+              <li style="--i:4;">4. 完成！<br>今すぐスタート</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- review -->
+  <section class="reviews margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2><span>Pixel</span>の導入事例</h2>
+            <span class="my-5">Pixelの皆さまによる活用事例</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="reviews-carousel text-center grid mb-2">
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- pricing -->
+  <section class="prices">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2><span>Pixel</span>の料金プラン</h2>
+            <span class="my-5">いつでもプランを変更することができます</span>
+          </div>
+        </div>
+      </div>
+
+      <main class="prices-carousel text-center mb-2">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">フリー</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">￥０/月</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>ユーザー数が１０名まで</li>
+                  <li>２ GBまでのファイル容量</li>
+                  <li> 1 対 1 の音声通話やビデオ通話</li>
+                  <li>メールカスタマーサポート</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Pixelを始める</button>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-text="おすすめ">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">プロ</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">￥６００<small class="text-muted fw-light">/月</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>ユーザー数が２０名まで</li>
+                  <li>１０ GBまでのファイル容量</li>
+                  <li>１５名までの音声通話やビデオ通話</li>
+                  <li>年中無休・24 時間カスタマーサポート</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Pixelを始める</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">エンタープライズ</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">￥１，６００<small class="text-muted fw-light">/月</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>ユーザー数が無制限</li>
+                  <li>１ TBまでのファイル容量</li>
+                  <li>５０名までの音声通話やビデオ通話</li>
+                  <li>専任の担当者による細やかなサポート</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Pixelを始める</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center my-5">プランを比較する</h2>
+
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">フリー</th>
+                <th style="width: 22%;">プロ</th>
+                <th style="width: 22%;">エンタープライズ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">2 要素認証</th>
+                <td>
+                  <svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg>
+                </td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">音声メッセージ</th>
+                <td></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">画面共有</th>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">ユーザーグループの作成</th>
+                <td></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">データのエクスポート</th>
+                <td></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">オフラインアクセス</th>
+                <td></td>
+                <td></td>
+                <td><svg class="c-check v--fill-black" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-255 347 100 100">
+                    <path
+                      d="M-217.1 431.8c-1 1.2-2.6 2.2-4 2.3-1.4.1-3-.8-4.3-1.9l-27.5-24.5 7.8-8.7 23.2 20.6 54.6-61.7 8.6 7.9-58.4 66z">
+                    </path>
+                  </svg></td>
+              </tr>
+            </tbody>
+          </table>
+      </main>
+
+    </div>
+  </section>
+
+
+
+  <!-- faq -->
+  <section class="faqs margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>よくあるご質問</h2>
+            <span class="my-5">Pixel についてもっと詳しく知る</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="faqs-carousel text-center mb-2">
+          <div class="accordion">
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- contact -->
+  <section class="contact margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>お問い合わせ</h2>
+            <span class="my-5">Pixel について何でもお問い合わせください。</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4">
+
+            <ul class="list-group">
+              <li class="d-flex justify-content-between lh-sm mb-3">
+                <h4>チームへの適用性についてもっと知りたい</h4>
+              </li>
+              <li class="d-flex justify-content-between lh-sm mb-3">
+                <div>
+                  <h4>料金プランを変更したい</h4>
+
+              </li>
+              <li class="d-flex justify-content-between lh-sm mb-3">
+                <h4>既にPixel をご利用されてる方</h4>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-md-7 col-lg-8">
+
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">姓：（必須）</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="例）：山田" value="" required>
+                  <div class="invalid-feedback">
+                    名字を教えてください。
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">名：（必須）</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="例）：拓也" value="" required>
+                  <div class="invalid-feedback">
+                    下のお名前を教えてください。
+                  </div>
+                </div>
+
+
+                <div class="col-12">
+                  <label for="email" class="form-label">メールアドレス：（必須）</label>
+                  <input type="email" class="form-control" id="email" placeholder="例）：company@example.com">
+                  <div class="invalid-feedback">
+                    メールアドレスを入力してください。
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="company" class="form-label">会社名：（必須）</label>
+                  <input type="text" class="form-control" id="company" placeholder="例）：ABC（株）" required>
+                  <div class="invalid-feedback">
+                    勤務先を教えてください。
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <label for="size" class="form-label">会社の規模：（必須）</label>
+                  <select name="size" id="size" class="form-select" required>
+                    <option selected disabled>一つ選択してください</option>
+                    <option value="A">1~10人</option>
+                    <option value="B">10~20人</option>
+                    <option value="C">20~50人</option>
+                    <option value="C">50~200人</option>
+                    <option value="C">200~1000人</option>
+                    <option value="C">1000人以上</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    会社の規模を選択してください。
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="size" class="form-label">どんな質問または相談でしょうか？（必須）</label>
+                  <select name="size" id="size" class="form-select" required>
+                    <option selected disabled>一つ選択してください</option>
+                    <option value="A">Pixelの導入について</option>
+                    <option value="B">どの料金プランが適しているのかを知りたい</option>
+                    <option value="C">Pixelに関して質問したい</option>
+                    <option value="C">プランの変更やお支払い方法について</option>
+                    <option value="C">その他について</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    お問い合わせ内容を選択してください。
+                  </div>
+                </div>
+                <hr class="my-4">
+                <label for="comment" class="form-label">解決したい課題はなんでしょうか?（任意）</label>
+                <textarea name="comment" id="comment" cols="30" rows="10">ほかにも何かあれば自由に記入してください。</textarea>
+                <hr class="my-4">
+
+                <label for="privacy" class="form-lable">
+                  <input type="checkbox" id="privacy">
+                  私は<a href="#123">プライバシーポリシー</a>に同意し、自身の個人情報の取り扱いに同意します
+                </label>
+                <button class="w-100 btn btn-primary btn-lg" type="submit">送信する</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta-->
+  <section class="cta margin m-auto p-5">
+    <div class="container">
+      <div class="row">
+        <div class="section-title text-center">
+          <h4 class="mb-5">まずは無料でお試し。<br> Pixel をチームで使ってみましょう。
+            <h4>
+              <button class="btn btn-1">今すぐダウンロード</button>
+        </div>
+      </div>
+  </section>
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>会社情報</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">会社概要</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">ブログ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">ニュース</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Pixelを使う理由</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">機能</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">ワークスペース</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">料金プラン</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">お試し</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">デモを見る</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>リソース</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">パートナー</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">開発者</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">リーダーシップ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">メディアリンクス</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">ヘルプセンター</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Pixel のニュースレターに登録</h5>
+            <p>Pixel からのお知らせやお役立ちコンテンツを受け取る。</p>
+            <label for="newsletter1" class="visually-hidden"></label>
+            <input id="newsletter1" type="text" class="form-control mb-3" placeholder="メールアドレス：">
+            <button class="btn btn-primary w-100" type="button">登録する</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2022 Pixel, Inc. All rights reserved.いずれの商標もそれぞれの所有者に帰属します。</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <!-- main js -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
