@@ -1,3 +1,13 @@
+const preloader = document.querySelector('.preloader');
+window.addEventListener('load', function () {
+    preloader.classList.add('hide');
+})
+
+
+
+
+
+
 const closePopup = document.querySelector('.video-popup i');
 const popUp = document.querySelector('.video-popup')
 const openPopup = document.querySelector('.video-play-btn');

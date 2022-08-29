@@ -145,6 +145,10 @@ p {
     color: #fff;
 }
 
+.navbar-brand {
+    font-size: 2rem;
+}
+
 nav .btn {
     order: 5;
     border: none;
@@ -1006,6 +1010,48 @@ footer {
 
     &.active {
         bottom: 10%;
+    }
+}
+
+.preloader {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    z-index: 999;
+    transition: all 0.5s linear;
+
+    span {
+        font-size: 2rem;
+        color: var(--primary);
+        display: inline-block;
+        animation: animate 2s ease-in-out infinite;
+        animation-delay: calc(0.2s * var(--i));
+        font-size: 2rem;
+        font-weight: bold;
+
+
+        @keyframes animate {
+            0% {
+                transform: translate(0px);
+            }
+
+            20% {
+                transform: translateY(-10px);
+            }
+
+            40%,
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    &.hide {
+        z-index: -999;
     }
 }
 
