@@ -28,6 +28,12 @@ $enable-shadows: true;
 // Then import Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
+html {
+    scroll-padding-top: 10vh;
+    scroll-behavior: smooth;
+}
+
+
 .btn-1 {
     background: #fff;
     border-radius: 30px;
@@ -41,6 +47,12 @@ $enable-shadows: true;
     &:hover {
         box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.3);
     }
+}
+
+button,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .grid {
@@ -117,7 +129,8 @@ $enable-shadows: true;
 
 .slide,
 .cta,
-.home {
+.home,
+.list-group {
     @include gradient
 }
 
@@ -179,6 +192,18 @@ nav .btn {
         border-radius: 30px;
     }
 
+}
+
+@media screen and (min-width:768px) {
+    nav.shrinked {
+        position: fixed;
+        width: 90vw;
+        margin: auto;
+        @include gradient;
+        border-radius: 50vh;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        opacity: .7;
+    }
 }
 
 
@@ -522,8 +547,6 @@ nav .btn {
 // // screenshots
 .slide {
     .carousel-inner {
-        width: 60vw;
-        margin: auto;
 
         .carousel-item {
 
@@ -531,14 +554,10 @@ nav .btn {
                 font-size: 1.2rem;
             }
 
-            img {
-                width: 25%;
-            }
         }
+
     }
-
 }
-
 
 // downloads
 .downloads {
@@ -587,40 +606,6 @@ nav .btn {
     }
 }
 
-.reviews {
-
-
-    .reviews-carousel {
-
-
-        .card {
-            width: 400px;
-            height: 500px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-            span,
-            p {
-                font-size: 1.2rem;
-            }
-
-            &:nth-of-type(even) {
-                @include gradient;
-
-                span,
-                p {
-                    color: #fff;
-                }
-            }
-
-
-            img {
-                width: 5rem;
-                height: 5rem;
-                border-radius: 50%;
-            }
-        }
-    }
-}
 
 // steps
 .card {
@@ -654,11 +639,8 @@ nav .btn {
                 font-size: 1.5rem;
                 display: grid;
                 place-items: center;
-
-                // .animate {
-                //     animation: color 1s ease-in-out forwards, scale 1s ease-in-out forwards;
-                //     animation-delay: calc(1s * var(--i));
-                // }
+                animation: color 1s ease-in-out forwards, scale 1s ease-in-out;
+                animation-delay: calc(1s * var(--i));
             }
 
 
@@ -695,51 +677,164 @@ nav .btn {
                 left: 0;
                 top: 1.75rem;
                 z-index: -1;
-
-                // .animate {
-
-                // }
+                animation: color 1s ease-in-out forwards;
+                animation-delay: calc(1s * var(--i));
             }
 
+
+            @keyframes scale {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+
+            @keyframes color {
+                from {
+                    background: #dcdcdc;
+                }
+
+                to {
+                    background: #94bbe9;
+                }
+            }
         }
     }
 }
 
-.animate {
-    li::before {
-        animation: color 1s ease-in-out forwards, scale 1s ease-in-out forwards;
-        animation-delay: calc(1s * var(--i));
-    }
+// reviews
 
-    li::after {
-        animation: color 1s ease-in-out forwards;
-        animation-delay: calc(1s * var(--i));
-    }
+.reviews {
 
 
-    @keyframes scale {
+    .reviews-carousel {
 
-        0%,
-        100% {
-            transform: scale(1);
-        }
 
-        50% {
-            transform: scale(1.2);
-        }
-    }
+        .card {
+            width: 400px;
+            height: 500px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: relative;
 
-    @keyframes color {
-        from {
-            background: #dcdcdc;
-        }
+            span,
+            p {
+                font-size: 1.2rem;
+            }
 
-        to {
-            background: #94bbe9;
+            &:nth-of-type(even) {
+                @include gradient;
+
+                span,
+                p,
+                a {
+                    color: #fff;
+                }
+
+                a::After {
+                    background: #fff;
+                }
+            }
+
+
+            img {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+            }
+
+            a {
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                color: #333;
+                text-decoration: none;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    background: #333;
+                    left: 0;
+                    bottom: 0;
+                    transform-origin: 0% 0%;
+                }
+
+
+                &:hover::after {
+                    transform-origin: 100% 100%;
+                    width: 100%;
+                    transition: .3s ease-in-out;
+                }
+
+                i {
+                    margin-left: .5rem;
+                }
+            }
         }
     }
 }
 
+// logo slider
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slider {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+
+    &::before,
+    &::after {
+        @include white-gradient;
+        content: "";
+        position: absolute;
+        display: block;
+        height: 80px;
+        width: 200px;
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotate(180deg);
+    }
+
+    .slider-tracker {
+        animation: scroll 50s linear infinite;
+        width: calc(250px * 14);
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 7))
+            }
+        }
+
+
+        img {
+            height: 80px;
+            width: 200px;
+            margin-right: 4rem;
+        }
+    }
+}
 
 
 // pricing
@@ -774,6 +869,8 @@ nav .btn {
 //contact
 .contact {
     .list-group {
+        overflow: hidden;
+
         h4::before {
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -811,9 +908,92 @@ footer {
 
 
 
+.back_to_top {
+    position: fixed;
+    right: 3%;
+    bottom: -200%;
+    font-size: 1.2rem;
+    padding: .3rem 1rem;
+    background: var(--primary);
+    animation: float 2s linear infinite;
 
+    i {
+        pointer-events: none;
+        color: #fff;
+    }
 
+    @keyframes float {
 
+        0%,
+        100% {
+            transform: translateY(0);
+            transform-origin: 0% 100%;
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    &.active {
+        bottom: 3%;
+    }
+}
+
+.tooltip-container {
+    position: fixed;
+    right: 3%;
+    bottom: 120%;
+    transition: 1s ease-in-out;
+
+    button {
+        position: relative;
+
+        i {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        &::before {
+            content: attr(data-title);
+            color: #fff;
+            position: absolute;
+            width: 200px;
+            left: 0;
+            top: 0;
+            transform: scale(0);
+            background: var(--secondary);
+            padding: 1rem;
+            border-radius: .3rem;
+            transform-origin: bottom center;
+        }
+
+        &::after {
+            content: '';
+            border: .8rem solid transparent;
+            border-top-color: var(--secondary);
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: scale(0);
+            transform-origin: bottom center;
+        }
+
+        &:hover::before {
+            transform: translate(-75%, -125%) scale(1);
+
+        }
+
+        &:hover::after {
+            transform: translate(-50%, -90%) scale(1);
+        }
+
+    }
+
+    &.active {
+        bottom: 10%;
+    }
+}
 
 
 @media screen and (max-width:768px) {
@@ -822,9 +1002,11 @@ footer {
     }
 
     .navbar {
+        @include gradient();
+
         .nav-item {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(4px);
+            // background: rgba(255, 255, 255, 0.25);
+            // backdrop-filter: blur(4px);
 
 
             .nav-link {
@@ -836,6 +1018,11 @@ footer {
 
     nav .btn {
         order: unset;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
     }
 
     .home {

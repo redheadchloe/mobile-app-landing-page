@@ -9,6 +9,38 @@ closePopup.addEventListener('click', () => {
     popUp.style.display = 'none';
 })
 
+const nav = document.querySelector('nav');
+const bttBtn = document.querySelector('.back_to_top')
+const tooltipContainer = document.querySelector('.tooltip-container');
+document.addEventListener('scroll', () => {
+    if (window.pageYOffset > 20) {
+        nav.classList.add('shrinked');
+    } else {
+        nav.classList.remove('shrinked');
+    }
+    if (window.pageYOffset > 300) {
+        bttBtn.classList.add('active');
+        tooltipContainer.classList.add('active');
+    } else {
+        bttBtn.classList.remove('active');
+    }
+})
+
+const sections = document.querySelectorAll('.navSection');
+const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const secName = entry.target.id;
+        const activeNav = document.querySelector(`[data-id=${secName}]`);
+        activeNav.classList.toggle('active', entry.isIntersecting);
+    }, {
+        rootMargin: '10vh',
+        threshold: 1,
+    })
+})
+sections.forEach(section => {
+    navObserver.observe(section);
+})
+
 
 features = [
     {
@@ -44,7 +76,7 @@ features = [
 ]
 const featuresContainer = document.querySelector('.features-carousel');
 for (let i = 0; i < features.length; i++) {
-    featuresContainer.innerHTML += `<div class="feature-item p-4 m-3 rounded">
+    featuresContainer.innerHTML += `<div class="feature-item p-4 m-3 rounded" data-aos="fade-up">
     ${features[i].icon}
     <h3 class="mb-3">${features[i].title}</h3>
     <p>${features[i].desc}</p>
@@ -70,30 +102,12 @@ downloads = [
 
 const downloadsContainer = document.querySelector('.downloads-carousel');
 for (let i = 0; i < downloads.length; i++) {
-    downloadsContainer.innerHTML += `<div class="download-item p-4 m-3 rounded">
+    downloadsContainer.innerHTML += `<div class="download-item p-4 m-3 rounded" data-aos="fade-right">
     ${downloads[i].icon}
     <h4 class="mb-3">${downloads[i].store} ストア</h4>
     <button class="btn btn-1 mb-3">今すぐダウンロード</button>
   </div>`
 }
-
-
-
-const steps = document.querySelectorAll('#progressbar li');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle('animete', entry.isIntersecting);
-        console.log('intersecting');
-    }, {
-        threshold: .9,
-    })
-})
-steps.forEach(step => {
-    observer.observe(step);
-})
-
-
-
 
 
 reviews = [
@@ -113,20 +127,74 @@ reviews = [
         'company': '株式会社XXX'
     }
 ]
-console.log(reviews.length);
 const reviewsContainer = document.querySelector('.reviews-carousel');
 for (let i = 0; i < reviews.length; i++) {
-    reviewsContainer.innerHTML += ` <div class="d-flex card m-2 px-5 align-items-center justify-content-center">
+    reviewsContainer.innerHTML += ` <div class="d-flex card m-2 px-5 align-items-center justify-content-center" data-aos="zoom-in-left">
     <span class="maintxt justify-content-center mb-5">${reviews[i].text}</span>
-    <div class="d-flex">
+    <div class="d-flex justify-content-between align-items-center w-100">
       <img src="img/avatar.png" alt="avatar">
-      <div class="p-2">
-        <p class="name">名前：${reviews[i].name}</p>
-        <p class="para">会社：${reviews[i].company}</p>
+      <div>
+        <p>名前：${reviews[i].name}</p>
+        <p class="mb-0">会社：${reviews[i].company}</p>
       </div>
     </div>
+    <div>
+    <a href="#1">続きを読む<i class="fa-solid fa-arrow-right-long"></i></a></div>
   </div>`
 }
+
+logos = [
+    {
+        'img': 'img/logo/amazon.png',
+    },
+    {
+        'img': 'img/logo/docomo.png',
+    },
+    {
+        'img': 'img/logo/panasonic.png',
+    },
+    {
+        'img': 'img/logo/google.png',
+    },
+    {
+        'img': 'img/logo/softbank.png',
+    },
+    {
+        'img': 'img/logo/recruit.png',
+    },
+    {
+        'img': 'img/logo/slack.png',
+    },
+    {
+        'img': 'img/logo/amazon.png',
+    },
+    {
+        'img': 'img/logo/docomo.png',
+    },
+    {
+        'img': 'img/logo/panasonic.png',
+    },
+    {
+        'img': 'img/logo/google.png',
+    },
+    {
+        'img': 'img/logo/softbank.png',
+    },
+    {
+        'img': 'img/logo/recruit.png',
+    },
+    {
+        'img': 'img/logo/slack.png',
+    },
+]
+
+const sliderTracker = document.querySelector('.slider-tracker');
+for (let i = 0; i < logos.length; i++) {
+    sliderTracker.innerHTML += `<img src="${logos[i].img}" class="py-3" alt="">`
+}
+
+
+
 
 faqs = [
     {
@@ -163,7 +231,7 @@ faqs = [
 
 const accordionContainer = document.querySelector('.accordion');
 for (let i = 0; i < faqs.length; i++) {
-    accordionContainer.innerHTML += `<div class="accordion-item">
+    accordionContainer.innerHTML += `<div class="accordion-item" data-aos="fade-up">
     <h2 class="accordion-header" id="heading${faqs[i].no}">
 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faqs[i].no}"
 aria-expanded="false" aria-controls="collapse${faqs[i].no}">

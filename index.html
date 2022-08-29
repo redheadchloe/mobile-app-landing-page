@@ -11,13 +11,14 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- main css -->
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <!-- nav -->
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Mobile App</a>
+      <a class="navbar-brand" href="index.html">Pixel</a>
       <button class="btn btn-light">今すぐダウンロード</button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,19 +27,19 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">機能</a>
+            <a class="nav-link" data-id="features" aria-current="page" href="#features">機能</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">導入画面</a>
+            <a class="nav-link" data-id="screenshot" href="#screenshot">導入画面</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">ユーザー事例</a>
+            <a class="nav-link" data-id="usercase" href="#usercase">ユーザー事例</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">料金プラン</a>
+            <a class="nav-link" data-id="pricing" href="#pricing">料金プラン</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">お問い合せ</a>
+            <a class="nav-link" data-id="contact" href="#contact">お問い合せ</a>
           </li>
         </ul>
       </div>
@@ -46,7 +47,7 @@
   </nav>
 
   <!-- key -->
-  <section class="home d-flex align-items-center">
+  <section class="home d-flex align-items-center" id="home">
     <div class="animate">
       <i class="fa-solid fa-arrow-up-long"></i>
       <i class="fa-solid fa-hourglass-end"></i>
@@ -88,7 +89,7 @@
   </div>
 
   <!-- features -->
-  <section class="features margin">
+  <section class="features margin navSection" id="features">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -106,7 +107,7 @@
 
   <!-- screenshoots -->
 
-  <div class="row justify-content-center">
+  <div class="row justify-content-center navSection" id="screenshot">
     <div class="col-lg-8">
       <div class="section-title text-center">
         <h2><span>Pixel</span>の導入画面</h2>
@@ -192,7 +193,7 @@
   </section>
 
   <!-- steps -->
-  <section class="steps margin">
+  <section class="steps margin" id="steps">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -204,7 +205,7 @@
       <div class="row">
         <div class="steps-carousel text-center mb-2">
           <div class="row d-flex justify-content-center card">
-            <ul id="progressbar" class="text-center p-5">
+            <ul id="progressbar" class="text-center p-5" data-aos="zoom-in-up">
               <li style="--i:1;">1. Pixel を<br>ダウンロードする</li>
               <li style="--i:2;">2. アカウントを<br>作成する</li>
               <li style="--i:3;">3. プランを<br>選べる</li>
@@ -217,7 +218,7 @@
   </section>
 
   <!-- review -->
-  <section class="reviews margin">
+  <section class="reviews margin navSection" id="usercase">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -238,10 +239,15 @@
     </div>
   </section>
 
+  <!-- logo slide -->
+  <div class="logo-slider m-auto">
+    <div class="slider-tracker d-flex align-items-center">
+    </div>
+  </div>
 
 
   <!-- pricing -->
-  <section class="prices">
+  <section class="prices navSection margin" id="pricing">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -255,7 +261,7 @@
       <main class="prices-carousel text-center mb-2">
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card mb-4 rounded-3 shadow-sm" data-aos="zoom-in-left">
               <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">フリー</h4>
               </div>
@@ -272,7 +278,7 @@
             </div>
           </div>
           <div class="col" data-text="おすすめ">
-            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card mb-4 rounded-3 shadow-sm" data-aos="zoom-in-up">
               <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">プロ</h4>
               </div>
@@ -289,7 +295,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary" data-aos="zoom-in-right">
               <div class="card-header py-3 text-bg-primary border-primary">
                 <h4 class="my-0 fw-normal">エンタープライズ</h4>
               </div>
@@ -459,7 +465,7 @@
 
 
   <!-- contact -->
-  <section class="contact margin">
+  <section class="contact margin navSection" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -473,16 +479,17 @@
         <div class="row g-5">
           <div class="col-md-5 col-lg-4">
 
-            <ul class="list-group">
-              <li class="d-flex justify-content-between lh-sm mb-3">
+            <ul class="list-group p-5">
+              <li class="d-flex justify-content-between lh-sm mb-3" data-aos="zoom-in-right">
                 <h4>チームへの適用性についてもっと知りたい</h4>
               </li>
-              <li class="d-flex justify-content-between lh-sm mb-3">
-                <div>
-                  <h4>料金プランを変更したい</h4>
-
+              <li class="d-flex justify-content-between lh-sm mb-3" data-aos="zoom-in-right">
+                <h4>料金プランをもっと知りたい</h4>
               </li>
-              <li class="d-flex justify-content-between lh-sm mb-3">
+              <li class="d-flex justify-content-between lh-sm mb-3" data-aos="zoom-in-right">
+                <h4>Pixel とメールの違いは</h4>
+              </li>
+              <li class="d-flex justify-content-between lh-sm mb-3" data-aos="zoom-in-right">
                 <h4>既にPixel をご利用されてる方</h4>
               </li>
             </ul>
@@ -564,7 +571,7 @@
 
                 <label for="privacy" class="form-lable">
                   <input type="checkbox" id="privacy">
-                  私は<a href="#123">プライバシーポリシー</a>に同意し、自身の個人情報の取り扱いに同意します
+                  私は<a href="#123">プライバシーポリシー</a>に同意し、自身の個人情報の取り扱いに同意します。
                 </label>
                 <button class="w-100 btn btn-primary btn-lg" type="submit">送信する</button>
             </form>
@@ -575,11 +582,11 @@
   </section>
 
   <!-- cta-->
-  <section class="cta margin m-auto p-5">
+  <section class="cta margin m-auto p-3">
     <div class="container">
       <div class="row">
         <div class="section-title text-center">
-          <h4 class="mb-5">まずは無料でお試し。<br> Pixel をチームで使ってみましょう。
+          <h4 class="mb-3">まずは無料でお試し。<br> Pixel をチームで使ってみましょう。
             <h4>
               <button class="btn btn-1">今すぐダウンロード</button>
         </div>
@@ -644,9 +651,19 @@
     </footer>
   </div>
 
+  <!-- tooltip -->
+  <div class="tooltip-container">
+    <div class="tooltip-wrapper">
+      <div class="tooltip-card">
+        <button type="button" class="btn btn-secondary" data-title="Pixel について何かご質問ありますか？">
+          <i class="fa-solid fa-circle-question"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
-
-
+  <!-- back to top -->
+  <a href="#home" class="back_to_top rounded"><i class="fa-solid fa-arrow-up-long"></i></a>
 
 
 
@@ -667,6 +684,13 @@
     crossorigin="anonymous"></script>
   <!-- main js -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 400,
+      duration: 1000,
+    });
+  </script>
 </body>
 
 </html>
