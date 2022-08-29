@@ -166,6 +166,12 @@ logos = [
         'img': 'img/logo/slack.png',
     },
     {
+        'img': 'img/logo/mericari.png',
+    },
+    {
+        'img': 'img/logo/line.png',
+    },
+    {
         'img': 'img/logo/amazon.png',
     },
     {
@@ -185,7 +191,12 @@ logos = [
     },
     {
         'img': 'img/logo/slack.png',
+    }, {
+        'img': 'img/logo/mericari.png',
     },
+    {
+        'img': 'img/logo/line.png',
+    }
 ]
 
 const sliderTracker = document.querySelector('.slider-tracker');
@@ -242,3 +253,7 @@ ${faqs[i].question}
 data-bs-parent="#accordionExample">
 <div class="accordion-body">${faqs[i].answer}</div></div></div>`;
 }
+
+// footer get year
+const date = document.querySelector('#date');
+date.innerHTML = new Date().getFullYear();

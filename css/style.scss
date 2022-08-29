@@ -906,7 +906,9 @@ nav .btn {
 }
 
 footer {
-    small {
+
+    small,
+    span {
         font-size: 1rem;
     }
 
@@ -1178,5 +1180,11 @@ footer {
     .cta {
         border-radius: 0;
         width: 100vw;
+    }
+
+    footer {
+        ul.list-unstyled {
+            margin-top: 2rem;
+        }
     }
 }
