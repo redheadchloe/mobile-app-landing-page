@@ -55,6 +55,12 @@ button,
     box-shadow: none;
 }
 
+i,
+span,
+p {
+    font-size: 1.4rem;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -85,14 +91,14 @@ button,
 
         span {
             color: var(--primary);
+            font-size: inherit;
         }
     }
 
     span.my-5 {
-        font-size: 1.5rem;
         display: inline-block;
         position: relative;
-        // word-break: keep-all;
+        word-break: keep-all;
 
         &::before {
             content: "";
@@ -259,7 +265,6 @@ nav .btn {
             &:last-child {
                 top: 75%;
                 left: 28%;
-                font-size: 1.2rem;
                 animation: spin01 4s linear infinite;
             }
         }
@@ -280,7 +285,6 @@ nav .btn {
         }
 
         p {
-            font-size: 1.5rem;
             line-height: 2;
         }
 
@@ -288,7 +292,6 @@ nav .btn {
             .video-play-btn {
                 padding: .8rem 1rem;
                 margin-left: 3rem;
-                font-size: 1.2rem;
                 border-radius: 50%;
                 border: none;
                 background: #fff;
@@ -519,6 +522,7 @@ nav .btn {
 
             p {
                 color: #808080;
+                font-size: 1.2rem;
             }
         }
     }
@@ -615,7 +619,7 @@ nav .btn {
     #progressbar {
         li {
             list-style-type: none;
-            font-size: 2rem;
+            font-size: 1.5rem;
             width: 25%;
             float: left;
             position: relative;
@@ -850,6 +854,12 @@ nav .btn {
             position: relative;
 
         }
+
+        .card {
+            li {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 
@@ -896,6 +906,10 @@ nav .btn {
 }
 
 footer {
+    small {
+        font-size: 1rem;
+    }
+
     ul.list-unstyled {
         li {
             i {
@@ -912,7 +926,6 @@ footer {
     position: fixed;
     right: 3%;
     bottom: -200%;
-    font-size: 1.2rem;
     padding: .3rem 1rem;
     background: var(--primary);
     animation: float 2s linear infinite;
@@ -951,7 +964,6 @@ footer {
 
         i {
             color: #fff;
-            font-size: 1.2rem;
         }
 
         &::before {
@@ -1001,6 +1013,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    i,
+    span,
+    p {
+        font-size: 1.2rem;
+    }
+
     .navbar {
         @include gradient();
 
@@ -1029,6 +1047,37 @@ footer {
         .container {
             .col-md-5 {
                 order: -1;
+                margin-bottom: 5rem;
+            }
+        }
+
+
+        .animate {
+            i {
+
+
+                &:first-child {
+                    left: 90%;
+                    top: 27%;
+
+                }
+
+                &:nth-child(2) {
+                    top: 20%;
+                    left: 10%;
+                }
+
+                &:last-child {
+                    top: 77%;
+                    left: 48%;
+
+                }
+            }
+        }
+
+        .home-text {
+            h1 {
+                font-size: 2rem;
             }
         }
     }
