@@ -120,6 +120,17 @@ for (let i = 0; i < downloads.length; i++) {
 }
 
 
+const stepTexts = document.querySelectorAll('#progressbar li span');
+const stepObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle('up', entry.isIntersecting);
+    })
+})
+stepTexts.forEach(stepText => {
+    stepObserver.observe(stepText);
+})
+
+
 reviews = [
     {
         'text': '"実際、Pixel はなくてはならないツールです。規模の拡張が簡単にできるうえ、遠くのオフィスメンバーやチームともつながっていられるからです。"',

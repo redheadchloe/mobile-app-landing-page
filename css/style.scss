@@ -61,6 +61,10 @@ p {
     font-size: 1.4rem;
 }
 
+li {
+    list-style-type: none;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -628,6 +632,28 @@ nav .btn {
             float: left;
             position: relative;
 
+            span.up {
+                animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation-delay: calc(.8s * var(--i));
+
+                @keyframes tracking-in-expand-fwd-bottom {
+                    0% {
+                        letter-spacing: -0.5em;
+                        // transform: translateZ(-700px) translateY(500px);
+                        opacity: 0;
+                    }
+
+                    40% {
+                        opacity: 0.6;
+                    }
+
+                    100% {
+                        // transform: translateZ(0) translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
 
             &::before,
             &::after {
@@ -708,11 +734,12 @@ nav .btn {
                 }
 
                 to {
-                    background: #94bbe9;
+                    background: var(--secondary);
                 }
             }
         }
     }
+
 }
 
 // reviews
@@ -782,6 +809,7 @@ nav .btn {
 
                 i {
                     margin-left: .5rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -1189,12 +1217,13 @@ footer {
     }
 
     .card {
+        // display: flex;
+
         #progressbar li {
             font-size: 1.5rem;
             display: grid;
             grid-template-columns: 30% 70%;
             width: 100%;
-
 
             &:not(:last-of-type) {
                 padding-bottom: 3rem;
@@ -1222,6 +1251,8 @@ footer {
             }
         }
     }
+
+
 
     .cta {
         border-radius: 0;
