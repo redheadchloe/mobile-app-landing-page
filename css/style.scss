@@ -7,26 +7,8 @@ $navbar-color:#fff;
 $enable-shadows: true;
 
 
-// :root {
-//     --main-color: #7857fe;
-//     --color-1: #e91e63;
-//     --color-2: #f5ae10;
-//     --color-3: #09d69c;
-//     --bg-dark: #2b2c2f;
-//     --main-to-dark-color: var(--main-color);
-//     --dark-to-main-color: var(--bg-dark);
-//     --black-900: #000000;
-//     --black-400: #555555;
-//     --black-100: #f7f7f7;
-//     --black-000: #ffffff;
-//     --black-alpha-100: rgba(0, 0, 0, .05);
-//     --shadow-black-100: 5px 15px rgba(0, 0, 0, 0.1);
-//     --shadow-black-300: 5px 15px rgba(0, 0, 0, 0.3);
-// }
-
-
 // Then import Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
 
 html {
     scroll-padding-top: 10vh;
@@ -90,8 +72,7 @@ li {
         font-size: 3rem;
         font-weight: normal;
         text-align: center;
-        flex-wrap: nowrap;
-        word-break: keep-all;
+        word-break: break-all;
 
         span {
             color: var(--primary);
@@ -454,7 +435,6 @@ nav .btn {
 
         .feature-item {
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            width: 400px;
             position: relative;
             z-index: 1;
             overflow: hidden;
@@ -574,7 +554,7 @@ nav .btn {
 // downloads
 .downloads {
     background: linear-gradient(120deg, rgba(148, 187, 233, .7) 0%, rgba(238, 174, 202, .7) 50%, rgba(35, 213, 171, .7) 100%),
-        url('/img/download-app-bg.jpeg') top;
+        url('../img/download-app-bg.jpeg') top;
     background-size: cover;
 
     .downloads-carousel {
@@ -751,7 +731,6 @@ nav .btn {
 
 
         .card {
-            width: 400px;
             height: 500px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             position: relative;
